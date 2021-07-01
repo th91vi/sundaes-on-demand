@@ -1,6 +1,5 @@
 import { rest } from "msw";
-
-const baseURL = "http://localhost:3030";
+import baseURL from "../utils/baseURL";
 
 export const handlers = [
   rest.get(`${baseURL}/scoops`, (req, res, ctx) => {
