@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Row } from "react-bootstrap";
 import axios from "axios";
 import baseURL from "../../utils/baseURL";
@@ -12,11 +12,13 @@ const Options = ({ optionType }) => {
       const { data } = await axios.get(`${baseURL}/${optionType}`);
       setItems(data);
     } catch (error) {
-      //@TODO: handle error response
+      console.log(error);
     }
   };
 
-  useCallback(fetchScoops, [optionType]);
+  useEffect(() => {
+    fetchScoops();
+  }, [optionType]);
 
   //@TODO: reṕlace with ToppingOption when available
   const ItemComponent = optionType === "scoops" ? ScoopOptions : null;
