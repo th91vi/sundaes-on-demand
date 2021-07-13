@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Row } from "react-bootstrap";
 import axios from "axios";
 import baseURL from "../../utils/baseURL";
