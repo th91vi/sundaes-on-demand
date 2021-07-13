@@ -15,7 +15,6 @@ const Options = ({ optionType }) => {
       const { data } = await axios.get(`${baseURL}/${optionType}`);
       setItems(data);
     } catch (error) {
-      console.log(error);
       setError(true);
     }
   };
