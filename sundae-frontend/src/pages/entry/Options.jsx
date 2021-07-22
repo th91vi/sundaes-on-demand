@@ -5,7 +5,7 @@ import baseURL from "../../utils/baseURL";
 import ScoopOption from "./ScoopOption";
 import ToppingOption from "./ToppingOption";
 import AlertBanner from "../commom/AlertBanner";
-import { pricePerItem } from "../../constants/pricePerItem";
+import pricePerItem from "../../constants/pricePerItem";
 import { useOrderDetails } from "../../contexts/OrderDetails";
 
 const Options = ({ optionType }) => {
