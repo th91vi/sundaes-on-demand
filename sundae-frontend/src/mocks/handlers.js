@@ -19,4 +19,7 @@ export const handlers = [
       ])
     );
   }),
+  rest.post(`${baseURL}/order`, (req, res, ctx) => {
+    return res(ctx.json({ ordernumber: 12344676 }));
+  }),
 ];
